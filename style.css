@@ -1,0 +1,485 @@
+
+/*---------Parametres GENERAUX_____________*/
+body {
+  width: 100%;
+  /*font-family: Arial, sans-serif;*/
+  padding: 0px;
+  margin: 0px;
+}
+
+.Conteneur {
+  width: 100%;
+}
+
+/*______Partie de gauche___________*/
+#Colone1 {
+width: 100%;
+background: -webkit-linear-gradient(left, #DAF7A6,#a3c5bb);
+border: #263238 2px solid;
+border-color: black;
+border-radius: 37px;
+}
+
+img {
+  margin-top: 5%;
+  margin-left: 35.5%;
+  width: 30%;
+  border-radius: 50%;
+  border: #263238 2px solid;
+  box-shadow: 1px 1px 20px #263238;
+}
+
+/*_______Habillage des titres_____*/
+.bandeau, h4 {
+  display: flex;
+  justify-content: center;
+  background-color: #263238;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: #1ccac8;
+}
+
+.Prog {
+  margin-left: 7%;
+  color: #0066ff;
+  font-size: 25px;
+}
+
+
+
+/*-----------circle----------*/
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50%;
+/*fond*/
+  padding: 2%;
+  /*background: -webkit-linear-gradient(left, #a445b2, #fa4299);*/
+background: -webkit-linear-gradient(left, #9900ff, #6699ff);
+}
+/*---Corps--du---général */
+.wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:  center;
+  justify-content: space-around;
+}
+
+.wrapper .card{
+  background: #041617ab;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px #263238;
+
+}
+/*circle taille*/
+.wrapper .card .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+/*circle int*/
+.card .circle .box,
+.card .circle .box span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/*cercle interne*/
+.card .circle .box{
+  height: 91%;
+  width: 91%;
+  background: #263238;
+/*background: #fff;*/
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.8s;
+}
+.card .circle:hover .box{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+/*text & ecouleur de  dégrader*/
+.card .circle .box span,
+.wrapper .card .text{
+  background: -webkit-linear-gradient(left, #fff, #1ccac8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/****taille %*******/
+.circle .box span{
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 200;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.card .circle:hover .box span{
+  transform: translate(-45%, -45%) scale(2.09);
+}
+/*xxxxxx%*/
+/*text taille*/
+.card .text{
+  font-size: 15px;
+  font-weight: 200;
+}
+
+@media(max-width: 760px){
+  .wrapper{
+    max-width: 760px;
+  }
+/*Espace entre les boites */
+  .wrapper .card{
+    /*width: calc(50% - 20px);*/
+    margin-bottom: 20px;
+    width: 10%;
+  }
+}
+@media(max-width: 630px){
+  .wrapper{
+    max-width: 505px;
+  }
+  .wrapper .card{
+    width: 50%;
+  }
+}
+/*-----------circle----Fin------*/
+
+/*code boite timeline */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: -webkit-linear-gradient(top, #f4ff00, #00fff2);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  box-shadow: 0px 0px 5px #263238;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -13px;
+  background-color: white;
+  border: 2px solid grey;
+  top: 22px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 0px 17px Blue;
+}
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+/* Place the container to the right */
+.right {
+  left: 51%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  /*border: medium solid white;*/
+  border: #263238 2px solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  /*border: medium solid white;*/
+  border: #263238 2px solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  /*background-color: white;*/
+  background: #b4f7cb4a;
+  box-shadow: 0px 0px 15px #263238;
+  position: relative;
+  border-radius: 6px;
+  border: #263238 1px solid;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+/*code boite timeline fin*/
+.content1{
+width: 45%;
+margin-left: 30px;
+padding: 5px 30px;
+/*background: green;*/
+background: -webkit-linear-gradient(left, #fff, #00fff2);
+box-shadow: 0px 0px 15px #263238;
+position: relative;
+border-radius: 16px;
+border: #263238 1px solid;
+
+
+  }
+
+
+/*___________Contacts et ResO________*/
+.contacts {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/*contacts*/
+.c1{
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+  color:  #4B00B4;
+  }
+
+.ResO {
+  display: flex;
+  font-size: 200%;
+  justify-content: space-around;
+  /*color: #1ccac8;*/
+  color: #0066ff;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  }
+
+
+
+.footer{
+  position: fixed;
+   left: 0;
+   bottom: 1px;
+   width: 100%;
+   color: #0066ff;
+   text-align: center;
+   font-size: 12px;
+}
+
+/* _______PARTIE DROITE__________ */
+.Colone2 {
+  width: 100%;
+/*background-color: #e5e5e5; #a3c5bb;*/
+background: -webkit-linear-gradient(left, #a3c5bb,#e5e5e5);
+border: #263238 2px solid;
+border-color: black;
+border-radius: 37px;
+}
+
+/*_____Couleur du texte Et Header______________*/
+header {
+  width: 100%;
+  padding-top: 1px;
+  font-family: serif;
+  font-size: 20px;
+}
+header h1, h2{
+  padding-left: 5px;
+  margin-left: 44px;
+}
+/*header h2 {
+  padding-left: 5px;
+  margin-left: 44px;
+}*/
+.Bleu {
+  color: /*#1ccac8*/#0066ff;
+}
+
+/*_________Dates et Description__________*/
+.ligneF {
+  display: flex;
+  flex-direction: column;
+}
+/*info Stages*/
+.infoR {
+  width: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.date {
+  width: 40%;
+  padding-left: 18px;
+}
+
+.info {
+  width: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+
+/*______les traits_____*/
+hr {
+  width: 14%;
+  text-align: left;
+  margin-left: 44px;
+  margin-top: -23px;
+  border-top: 2px solid #1ccac8;
+}
+
+.souligne {
+  width: 8%;
+  margin-top: -3px;
+  text-decoration: underline;
+}
+
+/*____________les Titres_____________*/
+h2 {
+  margin-left: -5px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+/*___________Paragraphes________*/
+.P1 {
+  margin-top: -19px;
+  margin-left: 35px;
+}
+.P2 {
+  margin-top: -19px;
+}
+
+p {
+  color: 	#00331a;
+  }
+
+
+/*__________ExPro & Formation___________*/
+#InfComp{
+  margin-top: 17%;
+}
+
+.fab{
+  /*border: #0066ff 2px solid;*/
+  border: yellow 2px solid;
+  border-radius: 37px;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 20px;
+
+}
+
+
+
+
+
+
+/*___________Les Media Queries_______*/
+@media screen and (min-width: 760px) {
+  .Conteneur {
+    display: flex;
+  }
+  #Colone1{
+    width: 100%;
+}
+#Colone2{
+    width: 100%;
+}
+
+.ligneF {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
