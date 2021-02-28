@@ -6,13 +6,14 @@
   <title>CV Bruno Deschamps</title>
   <script src="https://kit.fontawesome.com/20e3c71f66.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-<!--********circle******---->
+  <!--********circle******---->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-<!--********circle******---->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <!--********circle******---->
 
 </head>
+
 <body>
 
 
@@ -24,11 +25,11 @@
       <div class="Photo">
         <h3><img src="M2.png" alt="photo"></h3>
         <p><span class="Bleu">Bruno</span>
-           <span>DESCHAMPS</span></p> <br>
-<p class="P1"><span class="Bleu"><i class="fas fa-user-tie"></i> <i class="fas fa-tools"></i><i class="fas fa-industry"></i></span></p>
+          <span>DESCHAMPS</span></p> <br>
+        <p class="P1"><span class="Bleu"><i class="fas fa-user-tie"></i> <i class="fas fa-tools"></i><i class="fas fa-industry"></i></span></p>
       </div>
 
-        <!--<article class="ligneF">
+      <!--<article class="ligneF">
             <div class="infoR">
               <p><span class="Bleu">Bruno</span>
                  <span>DESCHAMPS</span></p>
@@ -37,42 +38,42 @@
          <p>Angoulême Charente</p>
        </div>-->
 
-<!--ptie icone--->
-        <article class="ligneF">
-         <div class="date">
-           </div>
-        </article>
-<!---ptie icone--->
+      <!--ptie icone--->
+      <article class="ligneF">
+        <div class="date">
+        </div>
+      </article>
+      <!---ptie icone--->
 
-          <!--</article>-->
+      <!--</article>-->
 
 
 
       <!-- Compétences Divers -->
       <article class="Compétance">
 
-          <h4 class="bandeau">Compétences Informatiques Diverses</h4>
+        <h4 class="bandeau">Compétences Informatiques Diverses</h4>
 
-          <p class="Prog"><i class="fas fa-desktop"></i> Systemes / Logiciels Divers </p>
+        <p class="Prog"><i class="fas fa-desktop"></i> Systemes / Logiciels Divers </p>
 
 
 
-  <!--****code****circule******---->
-          <div class="wrapper">
-            <div class="card react">
-              <div class="circle">
-                <div class="bar"></div>
-                <div class="box"><span></span></div>
-              </div>
-              <div class="text">Windows & Linux<br> <br> <i class="fab fa-windows"></i><i class="fab fa-linux"></i><i class="fab fa-android"></i>  <br> <br> Installation <br> Utillisation <br> Dépannage </div>
-            </div>
-
-            <div class="card Apple">
+        <!--****code****circule******---->
+        <div class="wrapper">
+          <div class="card react">
             <div class="circle">
               <div class="bar"></div>
               <div class="box"><span></span></div>
             </div>
-          <div class="text">Apple & Android<br> <br> <i class="fab fa-apple"></i><i class="fab fa-android"></i><br> <br> Installation <br> Utillisation <br> Dépannage </div>
+            <div class="text">Windows & Linux<br> <br> <i class="fab fa-windows"></i><i class="fab fa-linux"></i><i class="fab fa-android"></i> <br> <br> Installation <br> Utillisation <br> Dépannage </div>
+          </div>
+
+          <div class="card Apple">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">Apple & Android<br> <br> <i class="fab fa-apple"></i><i class="fab fa-android"></i><br> <br> Installation <br> Utillisation <br> Dépannage </div>
           </div>
 
           <div class="card">
@@ -81,7 +82,8 @@
               <div class="box"><span></span></div>
             </div>
             <div class="text">HTML & CSS
-             <p class="Prog"><i class="fab fa-css3-alt"></i><i class="fab fa-html5"></i></p></div>
+              <p class="Prog"><i class="fab fa-css3-alt"></i><i class="fab fa-html5"></i></p>
+            </div>
           </div>
 
           <div class="card js">
@@ -90,216 +92,221 @@
               <div class="box"><span></span></div>
             </div>
             <div class="text">JavaScript
-             <p class="Prog"><i class="fab fa-js-square"></i></p></div>
+              <p class="Prog"><i class="fab fa-js-square"></i></p>
+            </div>
           </div>
-        <div class="card Ventes">
-           <div class="circle">
-             <div class="bar"></div>
-             <div class="box"><span></span></div>
-           </div>
-           <div class="text">Ventes & Merchandising
-            <p class="Prog"><i class="fas fa-cash-register"></i> <i class="fas fa-store"></i></p></div>
-         </div>
-         </div>
-
-
-
-         <script>
-               let options = {
-                 startAngle: -1.55,
-                 size: 150,
-                 value: 0.99,
-                 fill: {gradient: ['#f4ff00', '#00fff2']}
-               }
-               $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-               function(event, progress, stepValue){
-                 $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-               });
-               $(".js .bar").circleProgress({
-                 value: 0.55
-               });
-               $(".react .bar").circleProgress({
-                 value: 0.99
-               });
-
-               $(".Apple .bar").circleProgress({
-                 value: 0.85
-               });
-               $(".Ventes .bar").circleProgress({
-                 value: 0.99
-              });
-         </script>
-
-          <!--****code****circule******---->
-        </article>
-        <br><br><br>
-
-<!-- A propos de moi -->
-          <article class="Apropos">
-            <h5 class="bandeau"><i class="fas fa-dice-d6"></i>__A PROPOS DE MOI__<i class="fas fa-dice-d6"></i></h5> <br> <br>
-            <p class="moi">Autodidacte et Passionné par La Création, Modélisation 2D/3D Animation,Photométrie,JeuxVideo.
-              Espace Métaverse (Monde virtuel, créé artificiellement par un programme informatique)<br> <br>
-
-
-              ---[ <i class="fas fa-tools"></i> Administration, aide Utilisateur, Maintenance et Programmation du système. <a href="http://fibia-origin.fr/">fibia-origin.fr</a><br><br>
-              ---[ <i class="fas fa-headphones"></i> La Musique live Dj et Web Radio <br> <br>
-              ---[ <i class="fas fa-motorcycle"></i> Ballade à moto et randonnée photo,<br>
-              ---[ <i class="fas fa-biking"></i> Le VTT <br>
-              ---[ <i class="fas fa-gamepad"></i> Les Jeux Video</p> <br> <br>
-<i class="fas fa-motorcycle"></i>______Permis :A__
-<i class="fas fa-car-side"></i>_____Permis :B__ <br> <br> <br>
-
-<!--contact-et-C1-->
-      <article class="Contacts">
-        <div id="iconespro">
-          <h4 class="bandeau">Contacts & Plus</h4> <br> <br>
-          <p class="c1"><i class="far fa-envelope"></i>...<i class="far fa-user-circle"></i>...bruno.deschamps07@gmail.com</p>
-          <p class="c1"><i class="fas fa-mouse"></i>...<i class="fas fa-network-wired"></i>...<i class="fas fa-wifi"></i>Site web<br> En cours de création<br> </p>
-          <!---<p class="contact">Téléphone <br>07.07.07.07.06</p>-->
+          <div class="card Ventes">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">Ventes & Merchandising
+              <p class="Prog"><i class="fas fa-cash-register"></i> <i class="fas fa-store"></i></p>
+            </div>
+          </div>
         </div>
+
+
+
+        <script>
+          let options = {
+            startAngle: -1.55,
+            size: 150,
+            value: 0.99,
+            fill: {
+              gradient: ['#f4ff00', '#00fff2']
+            }
+          }
+          $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+            function(event, progress, stepValue) {
+              $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+            });
+          $(".js .bar").circleProgress({
+            value: 0.55
+          });
+          $(".react .bar").circleProgress({
+            value: 0.99
+          });
+
+          $(".Apple .bar").circleProgress({
+            value: 0.85
+          });
+          $(".Ventes .bar").circleProgress({
+            value: 0.99
+          });
+        </script>
+
+        <!--****code****circule******---->
       </article>
-<!--contact-et-C1-->
+      <br><br><br>
 
-<p class="ResO"><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-github"></i><i class="fab fa-linkedin"></i> </p>
-      <section id="InfComp">
-<h5 class="bandeau"><i class="fas fa-pen-nib"></i>Infos Complémentaires</h5>
-<br><br>
-
-<div class="container left">
-  <div class="content">
-    <h2><i class="fas fa-user-graduate"></i>Diplomes</h2>
-    <h3>Cap-Bep - Bac Pro</h3>
-    <p>Sens Analytique <br>
-    Excellent Sens relationnel et d'écoute,<br>Rigueur,<br>Autonomie et Dynamique,<br>
-    Sens des Responsabilités et de la confidentialité</p>
-  </div>
-</div>
+      <!-- A propos de moi -->
+      <article class="Apropos">
+        <h5 class="bandeau"><i class="fas fa-dice-d6"></i>__A PROPOS DE MOI__<i class="fas fa-dice-d6"></i></h5> <br> <br>
+        <p class="moi">Autodidacte et Passionné par La Création, Modélisation 2D/3D Animation,Photométrie,JeuxVideo.
+          Espace Métaverse (Monde virtuel, créé artificiellement par un programme informatique)<br> <br>
 
 
+          ---[ <i class="fas fa-tools"></i> Administration, aide Utilisateur, Maintenance et Programmation du système. <a href="http://fibia-origin.fr/">fibia-origin.fr</a><br><br>
+          ---[ <i class="fas fa-headphones"></i> La Musique live Dj et Web Radio <br> <br>
+          ---[ <i class="fas fa-motorcycle"></i> Ballade à moto et randonnée photo,<br>
+          ---[ <i class="fas fa-biking"></i> Le VTT <br>
+          ---[ <i class="fas fa-gamepad"></i> Les Jeux Video</p> <br> <br>
+        <i class="fas fa-motorcycle"></i>______Permis :A__
+        <i class="fas fa-car-side"></i>_____Permis :B__ <br> <br> <br>
 
-
-<article class="ligneF">
-          <div class="infoR">
-            <p>Stages Entreprises:Technicien photocopieur </p>
-            <p>RICOH:en 1995</p>
-            <p>OCE France:en 1996</p>
-            <p>Blanchier Reprographie:en 1997</p>
+        <!--contact-et-C1-->
+        <article class="Contacts">
+          <div id="iconespro">
+            <h4 class="bandeau">Contacts & Plus</h4> <br> <br>
+            <p class="c1"><i class="far fa-envelope"></i>...<i class="far fa-user-circle"></i>...bruno.deschamps07@gmail.com</p>
+            <p class="c1"><i class="fas fa-mouse"></i>...<i class="fas fa-network-wired"></i>...<i class="fas fa-wifi"></i>Site web<br> En cours de création<br> </p>
+            <!---<p class="contact">Téléphone <br>07.07.07.07.06</p>-->
           </div>
-          <div class="infoR">
-          <p>Stages Entreprises: Vendeur Conseil</p>
-          <p>Géant Casino:2016</p>
-          <p>LV3D: Modélisation,Ventes de prestations,et Impressions3d </p>
-         </div>
-      </article>
-      </section>
+        </article>
+        <!--contact-et-C1-->
+
+        <p class="ResO"><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-github"></i><i class="fab fa-linkedin"></i> </p>
+        <section id="InfComp">
+          <h5 class="bandeau"><i class="fas fa-pen-nib"></i>Infos Complémentaires</h5>
+          <br><br>
+
+          <div class="container left">
+            <div class="content">
+              <h2><i class="fas fa-user-graduate"></i>Diplomes</h2>
+              <h3>Cap-Bep - Bac Pro</h3>
+              <p>Sens Analytique <br>
+                Excellent Sens relationnel et d'écoute,<br>Rigueur,<br>Autonomie et Dynamique,<br>
+                Sens des Responsabilités et de la confidentialité</p>
+            </div>
+          </div>
+
+
+
+
+          <article class="ligneF">
+            <div class="infoR">
+              <p>Stages Entreprises:Technicien photocopieur </p>
+              <p>RICOH:en 1995</p>
+              <p>OCE France:en 1996</p>
+              <p>Blanchier Reprographie:en 1997</p>
+            </div>
+            <div class="infoR">
+              <p>Stages Entreprises: Vendeur Conseil</p>
+              <p>Géant Casino:2016</p>
+              <p>LV3D: Modélisation,Ventes de prestations,et Impressions3d </p>
+            </div>
           </article>
         </section>
+      </article>
+    </section>
 
-  <!-- ************************************************** -->
+    <!-- ************************************************** -->
     <!-- Partie Droite Colone2-->
     <div class="Colone2">
       <!-- NOM PRENOM et Titre-->
       <header>
         <h1><span class="Bleu"><i class="fas fa-laptop-code"></i>Développeur</span>
           <span>Front-End </span></h1>
-          <p>Technicien Hardware/Software - Vendeur Conseil Magasin</p>
-    </header>
-<!--code bote time line -->
-<i class="fas fa-user-graduate"></i><strong>Formations</strong>
-    <div class="timeline">
- <div class="container left">
-       <div class="content">
-      <h2><span class="Bleu"> <i class="fas fa-user-graduate"></i> 2020-Auj <i class="fas fa-brain"></i></span></h2>
-         <p>Formation web Developeur OnLine: <br>
-         OpenClassRoom</p>
-       </div>
-     </div>
-     <div class="container right">
-     <div class="content">
-       <h2><i class="fas fa-user-graduate"></i> 2016</h2>
-       <h3>Bac Pro</h3>
-
-         <p>BAC PRO Vendeur-Conseil en magasin <br> Greta Charentes <br> Diplôme -----><input type="checkbox" checked="checked"></p>
-       </div>
-     </div>
-
-     <div class="container left">
-       <div class="content">
-         <h2><i class="fas fa-user-graduate"></i>1997</h2>
-         <h3>Cap-Bep</h3>
-         <p>Maintenance informatique, spécialisé en photocopieur,</p>
-         <p>Diplôme -----><input type="checkbox" checked="checked"></p>
-       </div>
-     </div>
-
-
-<!--boite titres -->
-     <!--<div class="container1">-->
-     <div class="content1">
-   <h3><i class="fas fa-user-tie"></i><strong> Expériences Professionnelles</strong></h3>
-    <hr class="souligne">
-</div>
-<!--</div>-->
-<!--boite titres -->
- <div class="container right">
-       <div class="content">
-         <h2><i class="fas fa-user-tie"></i> 2019-2018</h2>
-         <h3>Docteur It</h3>
-         <p class="P2">Technicien Téléphonie(Android/iOS)</p>
-         <p>Dépannage technicien Maintenance Ordinateur et Mac Consoles de jeux</p>
-         <p>Ventes de services, Encaissement, Merchandising divers et pièces détachées</p>
-         <p><i class="fas fa-tools"></i> <i class="fas fa-microchip"></i> <i class="fas fa-store"> <i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i></i> Charente</p>
-        </div>
-     </div>
-     <div class="container left">
-    <div class="content">
-         <h2><i class="fas fa-user-graduate"> 2018-2017</i> <br>Charente</h2>
-         <h3>Conforama</h3>
-         <p>Vendeur conseil magasin Rayon Multimedia et Electromenager</p>
-         <p>Vente de prestations et services</p>
-       </div>
-     </div>
-
-     <div class="container left">
-       <div class="content">
-         <h2><i class="fas fa-user-graduate"> 2013-2014</i> <br>Charente</h2>
-         <h3>Animateur de Vente</h3>
-         <p class="P2"> pour INTEL et HP</p>
-         <p>Exposition, mise en place des produits, Retour clients Amélioration Experiences produits</p>
-       </div>
-     </div>
-<div class="container right">
-       <div class="content">
-         <h2><i class="fas fa-user-graduate"></i> 2005-2013 <br>Charente</h2>
-         <h3>AID MULTIMEDIA</h3>
-         <p class="P2">Chef D'Entreprise</p>
-         <p>Dépannage à Domicile Technicien Maintenance Ordinateur/Mac / Technicien Réseaux(installation des Box et petits Réseaux) / Développeur images 3d et Affiches/Flyer 2d</p>
-         <p>Vente de prestations et services Divers (Initiation à l'ordinateur, Internet)</p>
-         <p>Création de mini site Perso</p>
-       </div>
-     </div>
- </div>
-<!--code bote time line Fin -->
-<hr class="souligne">
-
-<article class="ligneF">
-          <div class="date">
-          <span class="Bleu"><i class="fas fa-user-tie"></i> <i class="fas fa-tools"></i></span>
-            <p class="P1"> N'hésitez pas à prendre contact pour plus d'information</p>
+        <p>Technicien Hardware/Software - Vendeur Conseil Magasin</p>
+      </header>
+      <!--code bote time line -->
+      <i class="fas fa-user-graduate"></i><strong>Formations</strong>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h2><span class="Bleu"> <i class="fas fa-user-graduate"></i> 2020-Auj <i class="fas fa-brain"></i></span></h2>
+            <p>Formation web Developeur OnLine: <br>
+              OpenClassRoom</p>
           </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2><i class="fas fa-user-graduate"></i> 2016</h2>
+            <h3>Bac Pro</h3>
 
-          <!--<div class="info">
+            <p>BAC PRO Vendeur-Conseil en magasin <br> Greta Charentes <br> Diplôme -----><input type="checkbox" checked="checked"></p>
+          </div>
+        </div>
+
+        <div class="container left">
+          <div class="content">
+            <h2><i class="fas fa-user-graduate"></i>1997</h2>
+            <h3>Cap-Bep</h3>
+            <p>Maintenance informatique, spécialisé en photocopieur,</p>
+            <p>Diplôme -----><input type="checkbox" checked="checked"></p>
+          </div>
+        </div>
+
+
+        <!--boite titres -->
+        <!--<div class="container1">-->
+        <div class="content1">
+          <h3><i class="fas fa-user-tie"></i><strong> Expériences Professionnelles</strong></h3>
+          <hr class="souligne">
+        </div>
+        <!--</div>-->
+        <!--boite titres -->
+        <div class="container right">
+          <div class="content">
+            <h2><i class="fas fa-user-tie"></i> 2019-2018</h2>
+            <h3>Docteur It</h3>
+            <p class="P2">Technicien Téléphonie(Android/iOS)</p>
+            <p>Dépannage technicien Maintenance Ordinateur et Mac Consoles de jeux</p>
+            <p>Ventes de services, Encaissement, Merchandising divers et pièces détachées</p>
+            <p><i class="fas fa-tools"></i> <i class="fas fa-microchip"></i> <i class="fas fa-store"> <i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i></i> Charente</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2><i class="fas fa-user-graduate"> 2018-2017</i> <br>Charente</h2>
+            <h3>Conforama</h3>
+            <p>Vendeur conseil magasin Rayon Multimedia et Electromenager</p>
+            <p>Vente de prestations et services</p>
+          </div>
+        </div>
+
+        <div class="container left">
+          <div class="content">
+            <h2><i class="fas fa-user-graduate"> 2013-2014</i> <br>Charente</h2>
+            <h3>Animateur de Vente</h3>
+            <p class="P2"> pour INTEL et HP</p>
+            <p>Exposition, mise en place des produits, Retour clients Amélioration Experiences produits</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2><i class="fas fa-user-graduate"></i> 2005-2013 <br>Charente</h2>
+            <h3>AID MULTIMEDIA</h3>
+            <p class="P2">Chef D'Entreprise</p>
+            <p>Dépannage à Domicile Technicien Maintenance Ordinateur/Mac / Technicien Réseaux(installation des Box et petits Réseaux) / Développeur images 3d et Affiches/Flyer 2d</p>
+            <p>Vente de prestations et services Divers (Initiation à l'ordinateur, Internet)</p>
+            <p>Création de mini site Perso</p>
+          </div>
+        </div>
+      </div>
+      <!--code bote time line Fin -->
+      <hr class="souligne">
+
+      <article class="ligneF">
+        <div class="date">
+          <span class="Bleu"><i class="fas fa-user-tie"></i> <i class="fas fa-tools"></i></span>
+          <p class="P1"> N'hésitez pas à prendre contact pour plus d'information</p>
+        </div>
+
+        <!--<div class="info">
           </div>-->
-        </article>
-</div>
-</div>
-
-
-<footer>
-  <div class="footer">
-    ---<i class="fas fa-gem">---Création-BDeschamps-2021---</i>
+      </article>
     </div>
-</footer>
+  </div>
+
+
+  <footer>
+    <div class="footer">
+      ---<i class="fas fa-gem">---Création-BDeschamps-2021---</i>
+    </div>
+  </footer>
 
 </body>
+
 </html>
